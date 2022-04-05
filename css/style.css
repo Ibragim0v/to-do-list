@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p {
 .visually-hidden {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -46,4 +46,35 @@ h1, h2, h3, h4, h5, h6, p {
 
 .hidden {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.main__container {
+  background-image: url('./../img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+.main__form {
+  padding-top: 220px;
+}
+
+.checkbox__todo {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.checkbox__todo:checked + .todo-text {
+  text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+/*# sourceMappingURL=style.css.map */

@@ -6,10 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>To Do List</title>
 </head>
-<body>
+<body class="bg-dark">
+    
+    <div class="container-fluid main__container">
+        <form action="https://echo.www.w3schools.com/" method="GET" id="main-form" class="main__form gap-3 d-flex justify-content-center">
+            <div class="d-flex col-6">
+                <label class="text-white h3 me-3" for="enter">todolist</label>
+                <input id="main-input" type="text" class="form-control" id="enter" placeholder="enter somethings" name="enter">
+            </div>
+            
+            <button type="submit" class="btn btn-secondary">Convert</button>
+        </form>
+    </div>
 
+    <div id="main-control" class="d-flex justify-content-center gap-3 bg-secondary p-3">
+        <button type="button" id="all-btn" class="btn btn-warning col-1">All <span id="all-text">0</span></button>
+        <button type="button" id="uncompleted-btn" class="btn btn-danger col-2">Uncompleted <span id="uncompleted-text">0</span></button>
+        <button type="button" id="completed-btn" class="btn btn-success col-1">Completed <span id="completed-text">0</span></button>
+    </div>
+
+    <ul class="container text-center mt-3 h4" id="main-wrapper"></ul>
+
+    <template id="todo-template">
+        <li id="todo-item" class="p-1 rounded-3 m-2 bg-warning">
+            <input id="checkbox__todo" class="checkbox__todo" type="checkbox">
+            <span id="todo-text" class="todo-text"></span>
+            <button id="todo-del" class="btn btn-danger rounded-circle" type="button">x</button>
+        </li>
+    </template>
+    
     <!-- JAVASCRIPT -->
     <script src="./js/bootstrap.js"></script>
     <script src="./js/main.js"></script>
